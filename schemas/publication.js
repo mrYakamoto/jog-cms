@@ -12,7 +12,7 @@ export default {
       title: 'Publication URL',
       name: 'publicationUrl',
       type: 'url'
-    }
+    },
     {
       title: 'Logo',
       name: 'logo',
