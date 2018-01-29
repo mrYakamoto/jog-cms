@@ -9,6 +9,11 @@ export default {
       type: 'string'
     },
     {
+      title: 'Publication URL',
+      name: 'publicationUrl',
+      type: 'url'
+    }
+    {
       title: 'Logo',
       name: 'logo',
       type: 'image'
