@@ -14,6 +14,17 @@ export default {
       type: 'url'
     },
     {
+      title: 'Published On',
+      name: 'date',
+      type: 'datetime'
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+        timeFormat: '',
+        timeStep: 360,
+        calendarTodayLabel: 'Today'
+      }
+    },
+    {
       title: 'Image',
       name: 'image',
       type: 'image'
