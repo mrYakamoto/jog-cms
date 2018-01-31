@@ -4,6 +4,12 @@ export default {
   type: 'document',
   fields: [
     {
+      title: 'Weight',
+      name: 'weight',
+      title: 'Weight (0 - 10)',
+      type: 'number'
+    },
+    {
       title: 'Title',
       name: 'title',
       type: 'string'
@@ -16,11 +22,11 @@ export default {
     {
       title: 'Published On',
       name: 'date',
-      type: 'datetime'
+      type: 'datetime',
       options: {
         dateFormat: 'YYYY-MM-DD',
         timeFormat: '',
-        timeStep: 360,
+        timeStep: 1440,
         calendarTodayLabel: 'Today'
       }
     },
@@ -35,5 +41,31 @@ export default {
       type: 'reference',
       to: [{type: 'publication'}]
     }
-  ]
+  ],
+  orderings: [
+    {
+      title: 'Weight',
+      name: 'weight',
+      by: [
+        {field: 'weight', direction: 'desc'}
+      ]
+    }
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      weight: 'weight',
+      media: 'image'
+    },
+    prepare(selection) {
+      const {title, weight, media} = selection
+
+      return {
+        title: title,
+        subtitle: `[ ${weight} ]`,
+        description: '',
+        media: media
+      }
+    }
+  }
 }
