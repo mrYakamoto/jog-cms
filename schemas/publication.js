@@ -15,11 +15,6 @@ export default {
       type: 'string'
     },
     {
-      title: 'Publication URL',
-      name: 'publicationUrl',
-      type: 'url'
-    },
-    {
       title: 'Image',
       name: 'image',
       type: 'image'
