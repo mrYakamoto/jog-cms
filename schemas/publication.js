@@ -20,6 +20,15 @@ export default {
       type: 'image'
     }
   ],
+  orderings: [
+    {
+      title: 'Weight',
+      name: 'weight',
+      by: [
+        {field: 'weight', direction: 'desc'}
+      ]
+    }
+  ],
   preview: {
     select: {
       title: 'name',
