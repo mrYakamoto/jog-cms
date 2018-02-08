@@ -55,15 +55,16 @@ export default {
     select: {
       title: 'title',
       weight: 'weight',
+      publication: 'publication.name',
       media: 'image'
     },
     prepare(selection) {
-      const {title, weight, media} = selection
+      const {title, weight, media, publication} = selection
 
       return {
         title: title,
-        subtitle: `[ ${weight} ]`,
-        description: '',
+        subtitle: publication,
+        description: `[ ${weight} ]`,
         media: media
       }
     }
